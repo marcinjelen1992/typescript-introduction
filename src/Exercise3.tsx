@@ -31,6 +31,7 @@ interface Address {
 }
 
 interface Person {
+    id: number;
     firstName: string;
     lastName: string;
     age: number;
@@ -39,6 +40,7 @@ interface Person {
 }
 
 const person: Person = {
+    id: 1,
     firstName: 'Stefan',
     lastName: 'Nowak',
     age: 30,
@@ -58,6 +60,7 @@ console.log(person.address.city)
 console.log(person.getFullName());
 
 const person2: Person = {
+    id: 2,
     firstName: 'Karolina',
     lastName: 'Kowalska',
     age: 23,
@@ -84,7 +87,7 @@ const Exercise3 = () => {
         <div>{
             people.map(person => {
                 return (
-                    <div>
+                    <div key={person.id}>
                         <p>Name: {person.firstName} {person.lastName}</p>
                         <p>Age: {person.age}</p>
                         <p>City: {person.address.city}</p>

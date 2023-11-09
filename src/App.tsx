@@ -1,6 +1,7 @@
 import "./App.css";
 import { Exercise2 } from "./Exercise2";
 import { Exercise3 } from "./Exercise3";
+import { Exercise4 } from "./Exercise4";
 
 function App() {
 
@@ -48,6 +49,7 @@ const processString = (str?: string) => {
       </ol>
       <Exercise2 />
       <Exercise3 />
+      <Exercise4 />
     </>
   );
 }
